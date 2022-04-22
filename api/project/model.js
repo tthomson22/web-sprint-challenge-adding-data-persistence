@@ -12,7 +12,7 @@ function getProjectById(project_id) {
 }
 
 function createProject(project) {
-    return db('project')
+    return db('projects')
         .insert(project)
         .then(([id]) => {
             return getProjectById(id)
